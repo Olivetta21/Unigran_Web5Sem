@@ -1,12 +1,13 @@
-import { useState } from 'react'
+
 import './App.css'
-import Carrinho from './components/carrinho'
+import Prateleira from './models/Prateleira'
+import { produtos } from './data/produtos'
 
 function App() {
 
   return (
     <>
-    <Carrinho/>
+    <Prateleira produtos={produtos}/>
     </>
   )
 }
