@@ -1,30 +1,106 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title> Turismo </title>
+        <title> Cadastro </title>
     </head>
     <body>
-        <h1> Pontos Turísticos </h1>
-  
-        <section>
-            <h2>Area 51</h2>
-            <img src="https://lh5.googleusercontent.com/p/AF1QipPRIWnHn2Lund_tPlEzHC9v0kRC2dmMCXWJQXxU=w408-h265-k-no" alt="area51">
-            <iframe width="893" height="502" src="https://www.youtube.com/embed/HXaxWV-SGfk" title="Alien Adventures: Exploring Area 51 and the Extraterrestrial Highway!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101627.09659805249!2d-115.88640743968236!3d37.251342900978706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80b81baaba3e8c81%3A0x970427e38e6237ae!2zw4FyZWEgNTEsIE5WLCBFVUE!5e0!3m2!1spt-BR!2sbr!4v1739837007147!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-        <section>
-            <h2>Ilha da Pascoa</h2>
-            <img src="https://lh5.googleusercontent.com/p/AF1QipPTENNuX-VVyrsJ8_eNE5L1yQikSScG-MR8a-7k=w540-h312-n-k-no" alt="pascoa">
-            <iframe width="893" height="502" src="https://www.youtube.com/embed/0bF8zQEXL4w" title="ILHA DE PÁSCOA: ROTEIRO COMPLETO EM RAPA NUI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe src="" frameborder="0"></iframe>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113630.81131630564!2d-109.3388147!3d-27.12597995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9947f017a8d4ae2b%3A0xbbe5b3edc02a2db6!2sIlha%20de%20P%C3%A1scoa!5e0!3m2!1spt-BR!2sbr!4v1739837410226!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-        <section>
-            <h2>Muralha da China</h2>
-            <img src="https://lh5.googleusercontent.com/p/AF1QipMd4EhT8BEGKcfW9gSztmTdt4iOz6FN3us1lAVW=w408-h274-k-no" alt="muralha">
-            <iframe width="893" height="502" src="https://www.youtube.com/embed/uZ9mpHZctLM" title="MURALHA DA CHINA VAZIA: VÍDEO CINEMÁTICO 🇨🇳" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.958957464021!2d116.57037489999999!3d40.431907700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f121d7687f2ccf%3A0xd040259b950522df!2sMuralha%20da%20China!5e0!3m2!1spt-BR!2sbr!4v1739837465092!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>          
-        </section>
+        <h1> Cadastro </h1>
+        <form>
+            <div>
+                <h2> Informações Pessoais </h2>
+                <div>
+                    <label for="nome"> Nome Completo </label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+                <div>
+                    <label for="datanasc"> Data de Nascimento </label>
+                    <input type="date" name="datanasc" id="datanasc">
+                </div>
+                <div>
+                    <label for="genero"> Genero </label>
+                    <select id="genero" name="genero">
+                        <option disabled value="">escolha</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Feminino</option>
+                        <option value="3">Helicoptero</option>
+                        <option value="3">Outro</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="telefone"> Telefone </label>
+                    <input type="tel" name="telefone" id="telefone">
+                </div>
+            </div>
+            <hr>
+            <h2> Informações de Endereço </h2>
+            <div>
+                <div>
+                    <label for="ender"> Endereço </label>
+                    <input type="text" name="ender" id="ender">
+                </div>
+                <div>
+                    <label for="numero"> Numero </label>
+                    <input type="number" name="numero" id="numero">
+                </div>
+                <div>
+                    <label for="compl"> Complemento </label>
+                    <input type="text" name="compl" id="compl">
+                </div>
+                <div>
+                    <label for="bairro"> Bairro </label>
+                    <input type="text" name="bairro" id="bairro">
+                </div>
+                <div>
+                    <label for="cidade"> Cidade </label>
+                    <input type="text" name="cidade" id="cidade">
+                </div>
+                <div>
+                    <label for="estado"> Estado </label>
+                    <input type="text" name="estado" id="estado">
+                </div>
+                <div>
+                    <label for="cep"> CEP </label>
+                    <input type="text" name="cep" id="cep">
+                </div>
+            </div>
+            <hr>
+            <h2> Informações de acesso </h2>
+            <div>
+                <div>
+                    <label for="email"> Email </label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div>
+                    <label for="senha1"> Senha </label>
+                    <input type="password" name="senha1" id="senha1">
+                </div>
+                <div>
+                    <label for="senha2"> Confirme sua Senha </label>
+                    <input type="password" name="senha2" id="senha2">
+                </div>
+                <div>
+                    <label for="term"> Aceito os Termos e Condições </label>
+                    <input type="checkbox" name="term" id="term">
+                </div>
+            </div>
+            <hr>
+            <h2> Foto de Perfil </h2>
+            <div>
+                <label for="img"> Imagem </label>
+                <input type="file" name="imagem" name="imagem" id="img">
+            </div>
+            <hr>
+            <div>
+                <div>
+                    <button type="reset"> Resetar </button>
+                </div>
+                <div>
+                    <button type="submit"> Enviar </button>
+                </div>
+            </div>
+        </form>
+
+
     </body>
     <footer>
         <a href="https://olivetta.com.br"> &copy; olivetta.com.br todos os direitos reservados </a>
