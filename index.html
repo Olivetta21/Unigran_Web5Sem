@@ -1,172 +1,192 @@
 <html>
     <head>
-        <meta charset="utf-8">
-        <title> Cadastro </title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
         <style>
             * {
+                box-sizing: border-box;
                 padding: 0;
                 margin: 0;
-                box-sizing: border-box;
-                font-family: "Rubik", serif;
+                font-family: "Rubik", sans-serif;
+                color: rgb(70, 70, 70);
             }
-            body {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 5em;
-                gap: 5em;
-            }
-            html {
-                background-color: #222;
-            }
-            form {
-                border: 1px solid orange;
-                padding: 25px;
-                border-radius: 1em;
 
-                width: 90%;
-                max-width: 500px;
+            p, h1, h2, button {
+                color: #3751FE;
+            }
+			
+			a {
+				text-decoration: none;
+				transition: 0.2s;
+			}
+			a:hover {
+				box-shadow: 0 0 20px #3751FE;
+			}
 
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-                
-                box-shadow: 15px 15px 40px 0px #e3cda5;
-            }
-            .titulo {
-                color: orange;
-            }
-            form>div {
-                border: 5px solid orange;
-                background-color: #3d3d3d;
-                color: white;
-                border-radius: 5px;
-                padding: 10px;
-                width: 100%;
-                box-shadow: 5px 5px 15px 0px #ffffff78;
-            }
-            form>div>div>input {
-                width: 100%;
-            }
-            .sendbuttons {
+            #mainpage{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 80vh;
+                width: 70vw;
+
                 display: flex;
                 flex-direction: row;
-                gap: 10px
+                gap: 5px;
+
+                padding: 50px;
             }
-            .sendbuttons>div {
-                flex: auto;
+
+            #mainpage>div {
+                border: 1px solid rgb(175, 175, 175);
+                border-radius: 10px;
+                width: 50%;
+
+                padding: 50px;
+				overflow: auto;
+				scrollbar-width: none;
             }
-            .sendbuttons>div>button {
+
+            #left {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                justify-content: space-evenly;
+
+                background-color: rgb(247, 247, 247);
+            }
+            #right {
+                background-color: rgb(233, 233, 233);
+            }
+
+            .header {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #left>.header{
+
+            }
+            #right>.header {
+                
+            }
+
+            #left form {
+                display: flex;
+                flex-direction: column;
+
+                gap: 10px;
+            }
+            #left form>div {
+                display: flex;
+            }
+
+            #left form>div>button {
+                border: 1px solid #3751FE;
+                border-radius: 5px;
+                padding: 10px;
+
+                transition: 0.2s;
+
+                width: 7em;
+            }
+            #left form>div>button:hover {
+                color: white;
+                background-color: #3751FE;
+            }
+            #left form>div>button:nth-child(1) {
+                color: white;
+                background-color: #3751FE;
+            }
+            #left form>div>button:nth-child(1):hover {
+                color: #3751FE;
+                background-color: white;
+            }
+
+
+            #left .credentials {
+                border: 1px solid gray;
+                border-radius: 5px;
+                
+                flex-direction: column;
+
+                padding: 5px;
+                padding-left: 10px;
+            }
+
+            #left .credentials>input {
+                color: #3751FE;
+                border: none;
+                padding: 5px;
+            }
+
+
+            .rowbttns {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            .rowbttns.A {
+                justify-content: space-between;
+            }
+
+
+            img {
+				transform: translateY(50%);
                 width: 100%;
-                height: 4em;
             }
+
+            
+
         </style>
     </head>
     <body>
-        <form>
-            <h1 class="titulo"> Cadastro </h1>
-            <div>
-                <h2> Informações Pessoais </h2>
-                <div>
-                    <label for="nome"> Nome Completo </label>
-                    <input type="text" name="nome" id="nome">
+        <div  id="mainpage">
+            <div id="left">
+                <div class="header"> 
+                    <h2>Digital</h2> 
                 </div>
-                <div>
-                    <label for="datanasc"> Data de Nascimento </label>
-                    <input type="date" name="datanasc" id="datanasc">
-                </div>
-                <div>
-                    <label for="genero"> Genero </label>
-                    <select id="genero" name="genero">
-                        <option disabled value="">escolha</option>
-                        <option value="1">Masculino</option>
-                        <option value="2">Feminino</option>
-                        <option value="3">Helicoptero</option>
-                        <option value="3">Outro</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="telefone"> Telefone </label>
-                    <input type="tel" name="telefone" id="telefone">
-                </div>
-            </div>
-            
-            <div>
-                <h2> Informações de Endereço </h2>
-                <div>
-                    <label for="ender"> Endereço </label>
-                    <input type="text" name="ender" id="ender">
-                </div>
-                <div>
-                    <label for="numero"> Numero </label>
-                    <input type="number" name="numero" id="numero">
-                </div>
-                <div>
-                    <label for="compl"> Complemento </label>
-                    <input type="text" name="compl" id="compl">
-                </div>
-                <div>
-                    <label for="bairro"> Bairro </label>
-                    <input type="text" name="bairro" id="bairro">
-                </div>
-                <div>
-                    <label for="cidade"> Cidade </label>
-                    <input type="text" name="cidade" id="cidade">
-                </div>
-                <div>
-                    <label for="estado"> Estado </label>
-                    <input type="text" name="estado" id="estado">
-                </div>
-                <div>
-                    <label for="cep"> CEP </label>
-                    <input type="text" name="cep" id="cep">
+                <h1>Artificial Intelligence Driving Results For The Travel Industry</h1>
+                <span>Welcome back! Please login to your account.</span>
+                <form action="">
+                    <p>Email section</p>
+                    <div class="credentials">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="credentials">
+                        <label for="senha">password</label>
+                        <input type="password" id="senha" name="senha">
+                    </div>
+                    <div class="rowbttns A">
+                        <a href="https://olivetta.com.br"><span>Remember Me</span></a>
+                        <a href=""><span>Forgot Password?</span></a>
+                    </div>
+                    <div class="rowbttns">
+                        <button type="submit">Login</button>
+                        <button>Sign Up</button>
+                    </div>
+                </form>
+                <div class="rowbttns">
+                    <span>Or login with</span>
+                    <a href="https://facebook.com"><p>Facebook</p></a>
+                    <a href="https://linkedin.com/"><p>Linkedin</p></a>
+                    <a href="https://accounts.google.com/AccountChooser?source=ogb&continue=https%3A%2F%2Fclassroom.google.com%3Fauthuser%3D1%26ogss%3D1&Email=email%40unigran&ec=GAhAMQ"><p>Google</p></a>
                 </div>
             </div>
-            
-            <div>
-                <h2> Informações de acesso </h2>
-                <div>
-                    <label for="email"> Email </label>
-                    <input type="text" name="email" id="email">
+            <div id="right">
+                <div class="header rowbttns">
+                    <a href=""><span>Home</span></a>
+                    <a href=""><span>About us</span></a>
+                    <a href=""><span>Blog</span></a>
+                    <a href=""><span>Pricing</span></a>
                 </div>
-                <div>
-                    <label for="senha1"> Senha </label>
-                    <input type="password" name="senha1" id="senha1">
-                </div>
-                <div>
-                    <label for="senha2"> Confirme sua Senha </label>
-                    <input type="password" name="senha2" id="senha2">
-                </div>
-                <div>
-                    <label for="term"> Aceito os Termos e Condições </label>
-                    <input type="checkbox" name="term" id="term">
-                </div>
+                <img src="./clip-message-sent 1.png" alt="">
             </div>
-            
-            <div>
-                <h2> Foto de Perfil </h2>
-                <label for="img"> Imagem </label>
-                <input type="file" name="imagem" name="imagem" id="img">
-            </div>
-            
-            <div class="sendbuttons">
-                <div>
-                    <button type="reset"> Resetar </button>
-                </div>
-                <div>
-                    <button type="submit"> Enviar </button>
-                </div>
-            </div>
-        </form>
-
-
+        </div>
     </body>
-    <footer>
-        <a href="https://olivetta.com.br"> &copy; olivetta.com.br todos os direitos reservados </a>
-    </footer>
 </html>
