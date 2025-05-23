@@ -1,27 +1,21 @@
 import React from "react";
-import { produtos } from "./produtos";
 
-export default function Item() {
+export default function Item({id, nome, img}) {
 
     return (
-        <> {
-            produtos.map((i) =>{
-                <div class="item">
-                    <img alt="img0"/>
-                    <div> 
-                        <p> {i.nome} </p>
-                        <div>
-                        <p> R$ 8.599,90 </p>
-                        <div class="change-item">
-                            <button> - </button>
-                            <p> 1 </p>
-                            <button> + </button>
-                        </div>
-                        </div>
-                    </div>
+        <div class="item">
+            <img src={img} alt="img0"/>
+            <div> 
+                <p> {nome} </p>
+                <div>
+                <p> R$ {id} </p>
+                <div class="change-item">
+                    <button> - </button>
+                    <p> 1 </p>
+                    <button> + </button>
                 </div>
-            })
-        }
-         </>
+                </div>
+            </div>
+        </div>
     )
 }
