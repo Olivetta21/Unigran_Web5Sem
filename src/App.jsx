@@ -1,15 +1,11 @@
-
 import './App.css'
-import Prateleira from './models/Prateleira'
-import { produtos } from './data/produtos'
+import Routers from './components/Rotas/Routers'
 
-function App() {
+export default function App() {
 
   return (
     <>
-    <Prateleira produtos={produtos}/>
+      <Routers />
     </>
   )
 }
-
-export default App

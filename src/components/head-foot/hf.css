@@ -1,0 +1,16 @@
+:root {
+    --hsize: 30px;
+}
+
+
+#header {
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+    height: var(--hsize);
+    background-color: var(--brand-color);
+    z-index: 1000;
+}
