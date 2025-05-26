@@ -2,6 +2,8 @@ import axios from 'axios';
 const API = "http://localhost:3000/produtos";
 
 export async function criarProduto(nome, valor, imagem) {
+    console.log("Criando produto no servidor...", {nome, valor, imagem});
+
     try {
         const response = await axios.post(API+"/criar",
             {nome, valor, imagem},

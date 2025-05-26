@@ -1,0 +1,79 @@
+import { criarProduto } from "../../Fetchers/produto";
+import { useState } from "react";
+
+export default function CadastrarProduto() {
+    
+    const [nome, setNome] = useState("");
+    const [valor, setValor] = useState("");
+    const [imagem, setImagem] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        await criarProduto(nome, parseFloat(valor), imagem);
+    };
+
+    return (
+    <div
+        style={{
+        maxWidth: 400,
+        margin: "auto",
+        padding: 20,
+        fontFamily: "sans-serif",
+        }}
+    >
+        <h2>Cadastro de Produto</h2>
+        <form onSubmit={handleSubmit}>
+        <div style={{ marginBottom: 10 }}>
+            <label>Nome:</label>
+            <br />
+            <input
+            type="text"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+            required
+            style={{ width: "100%" }}
+            />
+        </div>
+        <div style={{ marginBottom: 10 }}>
+            <label>Valor (R$):</label>
+            <br />
+            <input
+            type="number"
+            step="0.01"
+            value={valor}
+            onChange={(e) => setValor(e.target.value)}
+            required
+            style={{ width: "100%" }}
+            />
+        </div>
+        <div style={{ marginBottom: 10 }}>
+            <label>Imagem (URL):</label>
+            <br />
+            <input
+            type="text"
+            value={imagem}
+            onChange={(e) => setImagem(e.target.value)}
+            style={{ width: "100%" }}
+            />
+        </div>
+        <button
+            type="submit"
+            style={{ width: "100%", padding: 10 }}
+        >
+            Cadastrar
+        </button>
+        </form>
+
+        {imagem && (
+        <div style={{ marginTop: 20 }}>
+            <p>Prévia da imagem:</p>
+            <img
+            src={imagem}
+            alt="Prévia"
+            style={{ width: "100%" }}
+            />
+        </div>
+        )}
+    </div>
+    );
+}
