@@ -33,3 +33,36 @@ export async function lerProdutos() {
         throw error;
     }
 }
+
+
+export async function atualizarProduto(id, nome, valor, imagem) {
+    console.log("Atualizando produto no servidor...", {id, nome, valor, imagem});
+
+    try {
+        const response = await axios.put(API+"/atualizar",
+            {id, nome, valor, imagem},
+            {headers: { "Content-Type": "application/json" }}
+        );
+
+        return response.data;
+    } catch (error) {
+        console.error("Erro ao atualizar produto:", error);
+        throw error;
+    }
+}
+
+export async function deletarProduto(id) {
+    console.log("Deletando produto no servidor...", {id});
+
+    try {
+        const response = await axios.delete(API+"/deletar", {
+            data: { id },
+            headers: { "Content-Type": "application/json" }
+        });
+
+        return response.data;
+    } catch (error) {
+        console.error("Erro ao deletar produto:", error);
+        throw error;
+    }
+}
