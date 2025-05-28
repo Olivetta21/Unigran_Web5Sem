@@ -20,7 +20,7 @@ export default function ListarProdutos() {
         <div>
             <ul>
                 {produtos.map((p) => (
-                    <li key={p.id} style={{ border: "1px solid black", padding: "10px", marginBottom: "10px" }}>
+                    <div key={p.id} style={{ border: "1px solid black", padding: "10px", marginBottom: "10px" }}>
                         <div> {p.id} </div>
                         <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
                             <div>
@@ -30,7 +30,7 @@ export default function ListarProdutos() {
                                 {p.nome} - {p.valor}
                             </div>
                         </div>
-                    </li>
+                    </div>
                 ))}
             </ul>
         </div>

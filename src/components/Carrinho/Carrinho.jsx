@@ -1,16 +1,18 @@
-import React from "react";
 import { produtos } from "../../data/produtos";
 import Produto from "./Produto";
 import "./carrinho.css";
+import { useContext } from "react";
+import { DataContext } from "../Context/DataContext";
 
-export default function Carrinho({setVisivel}) {
+export default function Carrinho() {
+    const { setCarrinhoVisible } = useContext(DataContext);
 
     return (
         <div id="carrinho">
             <div id="right">   
             <div id="r-header">
                 <p> Seu carrinho tem <strong> {produtos.length} itens </strong> </p>
-                <span><strong className="close" onClick={() => setVisivel(false)}>&times;</strong></span>
+                <span><strong className="close" onClick={() => setCarrinhoVisible(false)}>&times;</strong></span>
             </div>
             <div id="r-carrinho">
                 {produtos.map((item, index) => (

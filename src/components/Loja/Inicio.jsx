@@ -6,15 +6,13 @@ import Header from "../head-foot/Header";
 import { DataContext } from "../Context/DataContext";
 
 export default function Inicio() {
-    const [cartVisible, setCartVisible] = useState(false);
-
-    const { produtos } = useContext(DataContext);
+    const { produtos, carrinhoVisible } = useContext(DataContext);
 
     return (
         <div>
-            <Header Bttns={<BttnsHeader setVisivel={setCartVisible}/>}/>
+            <Header Bttns={<BttnsHeader/>}/>
             <Prateleira produtos={produtos} />
-            {cartVisible && <Carrinho setVisivel={setCartVisible}  />}
+            {carrinhoVisible && <Carrinho/>}
         </div>
     )
 }

@@ -1,0 +1,27 @@
+.produto-crud {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.produto-crud-menu {
+    height: 100%;
+    flex: 1;
+    background-color: var(--laranja);
+    padding: 20px;
+}
+.produto-crud-menu>div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.produto-crud-content {
+    flex: 90%;
+}
+.produto-crud-content>p {
+    font-size: 20px;
+    background-color: var(--laranja);
+    text-align: center;
+}

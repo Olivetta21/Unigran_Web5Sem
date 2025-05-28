@@ -5,6 +5,7 @@ export const DataContext = createContext();
 
 export default function DataProvider({ children }) {
     const [produtos, setProdutos] = useState([]);
+    const [carrinhoVisible, setCarrinhoVisible] = useState(false);
 
     useEffect(() => {
         async function fetchProdutos() {
@@ -19,7 +20,7 @@ export default function DataProvider({ children }) {
     }, [])
 
     return (
-        <DataContext.Provider value={{ produtos, setProdutos }}>
+        <DataContext.Provider value={{ produtos, setProdutos, carrinhoVisible, setCarrinhoVisible }}>
             {children}
         </DataContext.Provider>
     );
