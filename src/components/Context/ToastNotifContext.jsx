@@ -13,7 +13,7 @@ export default function ToastNotifProvider({children}) {
 
         setTimeout(() => {
             removeToast(id);
-        }, 30000);
+        }, 3000);
     }
 
     function removeToast(id) {

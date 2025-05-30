@@ -5,9 +5,7 @@ import Inicio from "../Loja/Inicio";
 import PrivateRoute from "../Auth/PrivateRoute";
 import ProdutoCrud from "../CRUD/ProdutoCrud";
 import CadastrarProduto from "../CRUD/Produto/CadastrarProduto";
-import AtualizarProduto from "../CRUD/Produto/AtualizarProduto";
 import ListarProdutos from "../CRUD/Produto/ListarProdutos";
-import DeletarProduto from "../CRUD/Produto/DeletarProduto";
 
 export default function Routers() {
     return ( 
@@ -17,9 +15,7 @@ export default function Routers() {
             <Route path="/inicio" element={<PrivateRoute><Inicio /></PrivateRoute>} />
             <Route path="/produtocrud" element={<PrivateRoute><ProdutoCrud /></PrivateRoute>} >
                 <Route path="/produtocrud/cadastrar" element={<CadastrarProduto />} />
-                <Route path="/produtocrud/atualizar" element={<AtualizarProduto />} />
                 <Route path="/produtocrud/visualizar" element={<ListarProdutos />} />
-                <Route path="/produtocrud/deletar" element={<DeletarProduto />} />
             </Route>
         </Routes>
     )
